@@ -1,0 +1,124 @@
+.listing{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    list-style: none;
+    gap: 10px;
+    grid-area: li;
+}
+ 
+.listing li {
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.listing li h2{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.listing .cta{
+    margin-top: auto;
+    border-top: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.listing .cta a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+.listing .body{
+    padding: 10px;
+}
+ 
+ 
+.left-sidebar{
+    grid-area: lf;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+ 
+.right-sidebar{
+    grid-area: rt;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+ 
+body{
+    background-color: aquamarine;
+    color:black;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas:
+    'hd hd hd'
+    'lf li rt'
+    'ft ft ft';
+ gap: 15px;
+}
+ 
+header{
+    grid-area: hd;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+ 
+footer{
+    grid-area: ft;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    body{
+        background-color: rgb(41, 115, 90);
+        color:black;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-areas:
+        'hd hd'
+        'lf li'
+        'ft ft';
+     gap: 15px;
+    }
+    header{
+        grid-area: hd;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+
+    .left-sidebar{
+        grid-area: lf;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+
+    footer{
+        grid-area: ft;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background-color: rgb(43, 255, 0);
+        color:black;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 50px 1fr 50px 30px;
+        grid-template-areas:
+        'hd'
+        'lf'
+        'li'
+        'rt'
+        'ft';
+     gap: 15px;
+    };
+}
+    
